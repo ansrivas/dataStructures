@@ -18,14 +18,43 @@ node * createNode(int iData){
      return temp;    
 }
 
+node * createList(node **head, int iData){
+     if(*head == NULL){
+     *head = createNode(iData);         
+     }
+     else
+     {
+      node *temp = *head ;
+      while(temp->next){
+        temp = temp->next;
+      }
+      temp->next = createNode(iData);                     
+     }
+     
+     
+return *head;
+}
 
 
-
+void vFnPrintList(node *head){
+     if(head){
+      while(head){
+       printf("%d ",head->iData);
+       head = head->next;            
+      }
+     }else{
+       printf("List Empty\n");      
+     }
+       return;     
+}
 
 int main(){
     
-    node *temp = createNode(4);
-    printf("%d",temp->iData);
+    node *head = NULL;
+    for(int i=0;i<4;i++){
+       createList(&head, i);     
+    }
+    vFnPrintList(head);
     getchar();
     return 1;
 }
