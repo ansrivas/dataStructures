@@ -2,6 +2,12 @@
 #include <malloc.h>
 #include <string.h>
 
+/*Merge Sort, O(nlogn)
+  Not an inplace algorithm, consumes extra space
+  
+*/
+
+
 void merge(int *iArr, int iStart, int iMid,  int iEnd, int iLen){
      int *tempArr= (int *)malloc(sizeof(int)*iLen);
      memset(tempArr, 0, iLen);
