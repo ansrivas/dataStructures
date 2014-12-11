@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <malloc.h>
+#include <iostream> 
 
 
 struct node{
@@ -20,6 +21,7 @@ void vFnPrintList(node *head);
 
 //sort a list with zeros and ones
 node* sortedListWithoneszeros(node **head);
+int kthfromEnd(node *head, int k);
 	
 
 #endif

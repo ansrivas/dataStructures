@@ -1,6 +1,4 @@
 #include "linkedlist.h"
-#include <iostream>
-#include <malloc.h>
 
 
 
@@ -98,18 +96,24 @@ void vFnPrintList(node *head){
        return;     
 }
 
-/*
-int main(){
-    
-    node *head = NULL;
-    for(int i=0;i<4;i++){
-       createList(&head, i);     
-    }
-    
-    vFnPrintList(head);
-    head = reverseListRecursive(&head);
-    printf("Reversed List\n");
-    vFnPrintList(head);
-    getchar();
-    return 1;
-}*/
+int kthfromEnd(node *head,int k){
+if(head){
+	node * fast = head, *slow = head;
+	for(int i=0;i<k;i++)
+		if(fast->next)
+		fast = fast->next;
+		else{
+			printf("Empty list\n");
+		return 	-1;
+		}
+		
+	while(fast!=NULL){
+			fast = fast->next;
+			slow = slow->next;
+	}
+	return slow->iData;
+	
+}	
+	
+	
+}

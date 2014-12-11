@@ -64,7 +64,7 @@ int main(int argc, char **argv)
 	printf("\n");
 	printf("%d\n",obj->peek());
 	
-	*/
+	
 	treenode *root = NULL;
 	for(int i =0;i<10;i++){
 	inserttree(&root,i);
@@ -74,7 +74,9 @@ int main(int argc, char **argv)
 	//printInorder(root);
 	 
 	//printLevelOrder(root);
-	/*
+	
+	 * 
+	 * 
 	CQueuenode *obj = new CQueuenode();
 	obj->enqueuenode(root);
 	obj->enqueuenode(root->right);
@@ -109,17 +111,18 @@ int main(int argc, char **argv)
 		}
 	
 	 * 
-	 * 
+	
 	node *head = NULL;
 	int k=0;
 	for(int i=0;i<10;i++){
-			scanf("%d",&k);
-			insertNode(&head,k);
+			//scanf("%d",&k);
+			insertNode(&head,i);
 	}
-		printList(head);
-	sortedListWithoneszeros(&head);
-	printList(head);
-	 * 
+	vFnPrintList(head);
+	//sortedListWithoneszeros(&head);
+	//printList(head);
+	printf("\n %d",kthfromEnd(head,3));
+	
 	 * 
 	 *
 	 * 
