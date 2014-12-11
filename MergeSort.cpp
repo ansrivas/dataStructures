@@ -1,11 +1,4 @@
-#include <stdio.h>
-#include <malloc.h>
-#include <string.h>
-
-/*Merge Sort, O(nlogn)
-  Not an inplace algorithm, consumes extra space
-  
-*/
+#include "MergeSort.h"
 
 
 void merge(int *iArr, int iStart, int iMid,  int iEnd, int iLen){
@@ -40,12 +33,7 @@ void merge(int *iArr, int iStart, int iMid,  int iEnd, int iLen){
      tempArr = NULL;
 }
 
-void vPrintArr(int *iArr, int iLen){
-     for(int i = 0 ; i < iLen ; i++){
-        printf("%d ", iArr[i]);       
-     }
 
-}
 
 void mergeSort(int *iArr, int iStart, int iEnd, int iLen){
    
@@ -57,14 +45,4 @@ void mergeSort(int *iArr, int iStart, int iEnd, int iLen){
   merge(iArr, iStart, pivot, iEnd,iLen);    
  }  
  return; 
-}
-
-
-int main(){
- int iArr[] = {1,4,9,8};   
- mergeSort(iArr, 0, 3, 4);
- vPrintArr(iArr, 4);
- getchar();
- return 0;
-
 }

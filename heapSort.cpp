@@ -2,15 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-
-void swap(int *a, int *b){
- if(*a == *b)
- return;
-  int temp = *a;
-  *a = *b;
-  *b = temp;     
-return;
-}
+#include "utils.h"
 
 
 
@@ -60,19 +52,4 @@ return;
 }
 
 
-void vPrintArr(int *iArr, int iLen){
-     for(int i = 0 ; i < iLen ; i++){
-        printf("%d ", iArr[i]);       
-     }
 
-}
-
-int main(){
-  int iArr[] = {3,2,5,7,9,1,4};
-  int iLen = sizeof(iArr)/sizeof(iArr[0]);
-  int iHeapSize = iLen;
-  heapSort(iArr, iLen,iHeapSize);
-  vPrintArr(iArr, iLen);
-  getchar();
-  return 0;     
-}

@@ -70,3 +70,37 @@ void printLevelOrder(treenode *root){
 	}
 
 
+void iterativeTreeTraversal(treenode *root){
+	//So the concept here is to make a threaded binary tree out of our tree for traversal
+	//and then fix it back
+	if(root){
+		
+		treenode * current = root, *temp = NULL;
+		while(current){
+			//if no left child, print root and move to right child	
+			if(current->left == NULL){
+					printf("%d",current->data);
+					current = current->right;
+			}	
+			else{
+				temp = current->left;
+				//trying to find inorder predecessor here
+				//temp will be the inorder predecssor of current now and link it to current node
+				while(temp->right != NULL || temp->right !=current)
+					temp = temp->right ;
+					//if we reached to the end of right subtree...create a link to current
+					if(temp->right == NULL){
+						temp->right = current;
+						current = current->left	;
+					}else{
+						printf("%d",current->data);
+						current = current->right;
+						
+					}
+			}	
+		}	
+	}
+	
+	
+return;	
+}

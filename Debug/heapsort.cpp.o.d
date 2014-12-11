@@ -1,5 +1,3 @@
-Debug/heapsort.cpp.o: heapsort.cpp heapsort.h utils.h
-
-heapsort.h:
+Debug/heapsort.cpp.o: heapsort.cpp utils.h
 
 utils.h:

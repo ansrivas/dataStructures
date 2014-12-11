@@ -102,6 +102,7 @@
     <File Name="queue_node.cpp"/>
     <File Name="majorityElement.cpp"/>
     <File Name="arrays.cpp"/>
+    <File Name="MergeSort.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="include">
     <File Name="linkedlist.h"/>
@@ -114,5 +115,6 @@
     <File Name="queue_node.h"/>
     <File Name="majorityElement.h"/>
     <File Name="arrays.h"/>
+    <File Name="MergeSort.h"/>
   </VirtualDirectory>
 </CodeLite_Project>

@@ -1,13 +1,8 @@
+#include "linkedlist.h"
 #include <iostream>
 #include <malloc.h>
 
-struct node{
- 
- int iData;
- struct node * next;      
-       
-};
-typedef struct node node ;
+
 
 
 //Fn to create an empty node
@@ -21,7 +16,7 @@ node * createNode(int iData){
 }
 
 //Fn to create a list 
-node * createList(node **head, int iData){
+node * insertNode(node **head, int iData){
      if(*head == NULL){
      *head = createNode(iData);         
      }
@@ -103,6 +98,7 @@ void vFnPrintList(node *head){
        return;     
 }
 
+/*
 int main(){
     
     node *head = NULL;
@@ -116,4 +112,4 @@ int main(){
     vFnPrintList(head);
     getchar();
     return 1;
-}
+}*/

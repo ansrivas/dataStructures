@@ -7,7 +7,7 @@
 
 struct node{
 	
-	int data;
+	int iData;
 	struct node* next;
 	
 };
@@ -15,8 +15,8 @@ typedef struct node node ;
 
 
 node* createNode(int data);
-void insertNode(node **head,int data);
-void printList(node *head);
+node* insertNode(node **head,int data);
+void vFnPrintList(node *head);
 
 //sort a list with zeros and ones
 node* sortedListWithoneszeros(node **head);

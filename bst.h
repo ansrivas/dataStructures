@@ -18,6 +18,6 @@ void printInorder(treenode *root);
 void bstToLinkedlist(treenode **root);
 int height(treenode *root);
 void printLevelOrder(treenode *root);
-
+void iterativeTreeTraversal(treenode *root);
 
 #endif

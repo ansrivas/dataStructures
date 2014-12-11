@@ -7,6 +7,7 @@
 #include "queue_node.h"
 #include "majorityElement.h"
 #include "arrays.h"
+#include "MergeSort.h"
 
 
 int fact(int num){
@@ -63,11 +64,12 @@ int main(int argc, char **argv)
 	printf("\n");
 	printf("%d\n",obj->peek());
 	
-	
+	*/
 	treenode *root = NULL;
 	for(int i =0;i<10;i++){
 	inserttree(&root,i);
 	}
+	iterativeTreeTraversal(root);
 
 	//printInorder(root);
 	 
@@ -89,7 +91,7 @@ int main(int argc, char **argv)
 		}
 	}
 	
-	/*
+
 	int input[10];
 	for (int i=1;i<10;i++){
 		input[i]=i;
@@ -132,7 +134,7 @@ int main(int argc, char **argv)
 		maximizeStockPrices(arr,sizeof(arr)/sizeof(arr[0]));
 		
 	
-	 */
+	 
 	updates inputs[3];
 		memset(inputs,0.0f,sizeof(updates)*3);
 		inputs[0].start = 1.21;
@@ -145,5 +147,13 @@ int main(int argc, char **argv)
 		inputs[3].end = 1.21;
 		longestContinuousPatch(inputs,4);
 	 
+	 
+	int iArr[] = {1,4,9,8};   
+	mergeSort(iArr, 0, 3, 4); 
+	vPrintArr(iArr,4);
+*/
+
+
+
 	return 0;
 }

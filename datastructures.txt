@@ -1,1 +1,1 @@
-./Debug/main.cpp.o ./Debug/linkedlist.cpp.o ./Debug/dynamicprogramming.cpp.o ./Debug/sorting.cpp.o ./Debug/utils.cpp.o ./Debug/bst.cpp.o ./Debug/queue.cpp.o ./Debug/heapsort.cpp.o ./Debug/queue_node.cpp.o ./Debug/majorityElement.cpp.o ./Debug/arrays.cpp.o   
+./Debug/main.cpp.o ./Debug/linkedlist.cpp.o ./Debug/dynamicprogramming.cpp.o ./Debug/sorting.cpp.o ./Debug/utils.cpp.o ./Debug/bst.cpp.o ./Debug/queue.cpp.o ./Debug/heapsort.cpp.o ./Debug/queue_node.cpp.o ./Debug/majorityElement.cpp.o ./Debug/arrays.cpp.o ./Debug/MergeSort.cpp.o   
