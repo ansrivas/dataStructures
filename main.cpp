@@ -63,20 +63,18 @@ int main(int argc, char **argv)
 	}
 	printf("\n");
 	printf("%d\n",obj->peek());
-	*/
 	
 	treenode *root = NULL;
-	int k=0;
-	for(int i =0;i<10;i++){
-		scanf("%d",&k);
-		inserttree(&root,k);
+	int k[]={5,7,2,4,1,0,6,8,9,10};
+	for(int i =0;i<10;i++){ 
+		inserttree(&root,k[i]);
 	}
-	
+	spiralLevelOrderTraversal(root);
 	//iterativeTreeTraversal(root);
-	int max =0,min =0;
-	findMaxMinDistanceFromRoot(root,&max,&min);
-	printf("%d %d",max,min);
-	verticalIterationLoop(root,min,max);
+	//int max =0,min =0;
+	//findMaxMinDistanceFromRoot(root,&max,&min);
+	//printf("%d %d",max,min);
+	//verticalIterationLoop(root,min,max);
 	//printInorder(root);
 	 
 	//printLevelOrder(root);

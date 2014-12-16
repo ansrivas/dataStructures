@@ -161,3 +161,38 @@ void verticalIteration(treenode *root,int minmax,int level){
 	}
 return;	
 }
+
+
+void spiralLevelLoop(treenode *root,int depth,bool flip){
+	
+	if(root){
+		if(depth ==0){
+		 printf("%d",root->data);
+		}else{
+				if(flip){
+				spiralLevelLoop(root->left,depth-1,flip);
+				spiralLevelLoop(root->right,depth-1,flip);
+				}
+				else{
+					spiralLevelLoop(root->right,depth-1,flip);
+					spiralLevelLoop(root->left,depth-1,flip);
+				}
+		}
+	}
+ 
+return;	
+}
+
+
+void spiralLevelOrderTraversal(treenode *root){
+	int depth = height(root);
+	bool flip = true;
+	if(root){
+		for(int i=0;i<depth;i++){
+				spiralLevelLoop(root,i,flip);
+				flip = !flip;
+				printf("\n");
+		}
+	}
+	return;
+}
