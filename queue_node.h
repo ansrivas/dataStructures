@@ -13,6 +13,9 @@ private:
 	//std::vector(int) input;
 	treenode  **input;
 	int top,end, prev_mem,step_size; 
+	//using level for populating right node of the tree
+	int level;
+	
 	
 public :
 	CQueuenode();

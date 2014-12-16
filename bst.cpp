@@ -1,4 +1,5 @@
 #include "bst.h"
+#include "queue_node.h"
 
 
 treenode * createTreeNode(int data){
@@ -102,5 +103,61 @@ void iterativeTreeTraversal(treenode *root){
 	}
 	
 	
+return;	
+}
+
+
+void iterativeLevelOrder(treenode *root){
+	treenode *temp = root;
+	CQueuenode *que = new CQueuenode();
+	while(temp){
+			printf("%d",root->data);
+			
+			if(temp->left){
+				que->enqueuenode(root->left);
+			}
+			if(temp->right){
+				que->enqueuenode(root->right);
+			}
+			
+			temp = que->dequeuenode();
+	}  
+return;	
+}
+
+
+void findMaxMinDistanceFromRoot(treenode *root, int *max, int *min){
+	 
+	if(root){
+			if(root->left){
+				*min = *min -1;
+				findMaxMinDistanceFromRoot(root->left, max,min);
+			}
+			if(root->right)
+			
+				*max = *max +1;
+				findMaxMinDistanceFromRoot(root->right,max,min);
+			}
+	}
+
+void verticalIterationLoop(treenode *root, int min, int max){
+	int level = 0;
+	for(int i=min ;i<max ;i++){
+		verticalIteration(root,i,level);
+		printf("\n");
+	}
+return;	
+}
+
+void verticalIteration(treenode *root,int minmax,int level){
+	
+	if(root){
+		if(minmax == level){
+				printf("%d",root->data);
+		}
+		verticalIteration(root->left,minmax,level-1);
+		verticalIteration(root->right,minmax,level+1);
+		
+	}
 return;	
 }

@@ -3,6 +3,7 @@
 #include <malloc.h>
 #include <stdio.h>
 #include "utils.h"
+//#include "queue_node.h"
 
 
 struct treenode {
@@ -19,5 +20,12 @@ void bstToLinkedlist(treenode **root);
 int height(treenode *root);
 void printLevelOrder(treenode *root);
 void iterativeTreeTraversal(treenode *root);
+void iterativeLevelOrder(treenode *root);
+
+void verticalIterationLoop(treenode *root, int min, int max);
+
+
+void findMaxMinDistanceFromRoot(treenode *root, int *max, int *min);
+void verticalIteration(treenode *root, int min, int max);
 
 #endif
