@@ -8,6 +8,8 @@
 #include "majorityElement.h"
 #include "arrays.h"
 #include "MergeSort.h"
+#include "greedy.h"
+
 
 
 int fact(int num){
@@ -63,13 +65,14 @@ int main(int argc, char **argv)
 	}
 	printf("\n");
 	printf("%d\n",obj->peek());
-	
+	*/
 	treenode *root = NULL;
 	int k[]={5,7,2,4,1,0,6,8,9,10};
 	for(int i =0;i<10;i++){ 
 		inserttree(&root,k[i]);
 	}
-	spiralLevelOrderTraversal(root);
+	printf("%d",countLeafNodes(root));
+	//spiralLevelOrderTraversal(root);
 	//iterativeTreeTraversal(root);
 	//int max =0,min =0;
 	//findMaxMinDistanceFromRoot(root,&max,&min);
@@ -77,7 +80,7 @@ int main(int argc, char **argv)
 	//verticalIterationLoop(root,min,max);
 	//printInorder(root);
 	 
-	//printLevelOrder(root);
+	printLevelOrder(root);
 	
 	 /* 
 	 * 
@@ -161,6 +164,9 @@ int main(int argc, char **argv)
 */
 
 
+	char buff[100] = {'a','b','c','\0'};
+	memset(buff , 0, sizeof(buff));
+	printf("%s",itoa(0,buff));
 
 	return 0;
 }

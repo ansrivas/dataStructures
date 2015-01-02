@@ -12,6 +12,8 @@ treenode * createTreeNode(int data){
 	
 }
 
+
+
 void inserttree(treenode **root,int data){
 	
 	if(*root == NULL){
@@ -65,6 +67,7 @@ void printLevelOrder(treenode *root){
 	if(root){
 		for(int i=0; i<depth; i++){
 				printEachLevel(root,i);
+				printf("\n");
 			}
 		}
 	return;
@@ -196,3 +199,74 @@ void spiralLevelOrderTraversal(treenode *root){
 	}
 	return;
 }
+
+int countLeafNodes(treenode *root){
+	if(root){
+			if(root->left == NULL && root->right == NULL){
+					return 1;
+			}
+			return countLeafNodes(root->left) + countLeafNodes(root->right);
+		
+	}
+	return 0;
+}
+
+
+treenode *findnode(treenode *root,int data){
+	if(root){
+		if(root->data ==data)
+			return root;
+		if(data < root->data)
+		{
+				return findnode(root->left,data);
+		}
+		else{
+				return findnode(root->right,data);
+			}
+	}
+	printf("No node with %d found\n",data);
+	return NULL;
+}
+
+
+int bstLCAiTerative(treenode *root, int data1, int data2){
+treenode *temp = root;
+	while(root){
+	
+	
+	
+}	
+	
+}
+
+
+int LCA(treenode *root,int data1, int data2){
+	if( findnode(root,data1)!= NULL && findnode(root,data2)!=NULL)
+		return bstLCA(root, data1, data2);
+}
+
+
+//Least common ancestor -recursive
+int bstLCA(treenode *root,int data1, int data2){ 
+if(root ){
+	if( (data1 <= root->data	&& data2>=root->data)|| (data1 >= root->data	&& data2 <= root->data))
+		return root->data;
+ 
+	if(data1 < root->data && data2 < root->data)
+		return bstLCA(root->left, data1, data2);
+	else return bstLCA(root->right,data1, data2);
+}	
+
+printf("Data not found\n");
+return -1;
+}
+
+treenode * inorderSuccessor(treenode *root, int data){
+	if(root){
+		
+		
+	}
+	
+	return NULL;
+}
+

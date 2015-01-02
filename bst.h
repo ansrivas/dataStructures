@@ -28,7 +28,11 @@ void verticalIteration(treenode *root, int min, int max);
 void spiralLevelLoop(treenode *root,int depth,bool flip);
 void spiralLevelOrderTraversal(treenode *root);
 
+int countLeafNodes(treenode *root);
 
+treenode * inorderSuccessor(treenode *root); 
 
-
+int LCA(treenode *root,int data1, int data2);
+int bstLCA(treenode *root,int data1, int data2);
+treenode *findnode(treenode *root,int data);
 #endif
