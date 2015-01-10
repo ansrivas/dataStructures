@@ -1,0 +1,2 @@
+Site	Cell	TrxAnzahl	STOBTRX	            STOB	LAC
+OXB618	OXB618A	    4	          4	             20	        3250	

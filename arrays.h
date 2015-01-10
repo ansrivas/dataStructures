@@ -28,4 +28,12 @@ bool acompare(updates a, updates b);
 
 void longestContinuousPatch(updates inputs[],int numberOfInputs);
 
+//Check if a given array contains duplicate elements 
+//within k distance from each other
+bool dupAtKdistance(int *arr, int len);
+void minimizeTransactions(int **arr,int row, int col);
+
+
+
+
 #endif

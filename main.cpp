@@ -7,8 +7,24 @@
 #include "queue_node.h"
 #include "majorityElement.h"
 #include "arrays.h"
-#include "MergeSort.h"
-#include "greedy.h"
+#include "MergeSort.h" 
+
+int test(int dimension,...){
+	
+	int *arr1d = NULL;
+	int **arr2d = NULL;
+	va_list valist;
+	va_start(valist, dimension);
+	   /* access all the arguments assigned to valist */
+
+	int iter =0;
+       int **ptr = va_arg(valist, int**);
+    vPrintArr(ptr[0], 2);
+	vPrintArr(ptr[1], 2);
+
+    /* clean memory reserved for valist */
+    va_end(valist);	
+}
 
 
 
@@ -33,7 +49,22 @@ return val;
 }
 
 
+int readfile(){
+ 
+    		FILE *ptr_file;
+    		char buf[1000];
 
+    		ptr_file =fopen("test.txt","r");
+    		if (!ptr_file)
+        		return 1;
+
+    		while (fgets(buf,1000, ptr_file)!=NULL)
+        		printf("%s",buf);
+
+		fclose(ptr_file);
+    		return 0;
+	}
+	
 int main(int argc, char **argv)
 {
 	/*
@@ -65,7 +96,8 @@ int main(int argc, char **argv)
 	}
 	printf("\n");
 	printf("%d\n",obj->peek());
-	*/
+	
+	
 	treenode *root = NULL;
 	int k[]={5,7,2,4,1,0,6,8,9,10};
 	for(int i =0;i<10;i++){ 
@@ -161,12 +193,44 @@ int main(int argc, char **argv)
 	int iArr[] = {1,4,9,8};   
 	mergeSort(iArr, 0, 3, 4); 
 	vPrintArr(iArr,4);
-*/
 
 
 	char buff[100] = {'a','b','c','\0'};
 	memset(buff , 0, sizeof(buff));
 	printf("%s",itoa(0,buff));
 
+
+
+	int *arr  = NULL;
+	arr = random(1);
+	printf("%d\n",arr[0]);
+	
+	arr = random(5);
+	int **arr2d = (int **)malloc(sizeof(int *)*2);
+	arr2d[0] = random(2);
+	arr2d[1] = random(2);
+	test(1,arr2d);
+	//vPrintArr(arr, 5);
+	
+	
+	if(isPrime(29))
+		printf("true");
+	*/
+	
+	
+	//readfile();
+	
+	//int *arr  = NULL;
+	//arr = random(5);
+	//vPrintArr(arr, 5);
+	
+	node *head = NULL;
+	for(int i = 0;i<9;i++){
+		insertNode(&head,i);
+	}
+	vFnPrintList(head);
+	head = reverseListAtK(&head,3);
+	vFnPrintList(head);
+	
 	return 0;
 }

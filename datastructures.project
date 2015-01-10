@@ -117,4 +117,6 @@
     <File Name="arrays.h"/>
     <File Name="MergeSort.h"/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
 </CodeLite_Project>

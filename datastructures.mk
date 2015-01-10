@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Ankur
-Date                   :=01/02/15
+Date                   :=01/10/15
 CodeLitePath           :="C:\Program Files (x86)\CodeLite"
 LinkerName             :=C:/MinGW-4.8.1/bin/g++.exe 
 SharedObjectLinkerName :=C:/MinGW-4.8.1/bin/g++.exe -shared -fPIC
@@ -64,7 +64,7 @@ AS       := C:/MinGW-4.8.1/bin/as.exe
 CodeLiteDir:=C:\Program Files (x86)\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/linkedlist.cpp$(ObjectSuffix) $(IntermediateDirectory)/dynamicprogramming.cpp$(ObjectSuffix) $(IntermediateDirectory)/sorting.cpp$(ObjectSuffix) $(IntermediateDirectory)/utils.cpp$(ObjectSuffix) $(IntermediateDirectory)/bst.cpp$(ObjectSuffix) $(IntermediateDirectory)/queue.cpp$(ObjectSuffix) $(IntermediateDirectory)/heapsort.cpp$(ObjectSuffix) $(IntermediateDirectory)/queue_node.cpp$(ObjectSuffix) $(IntermediateDirectory)/majorityElement.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/arrays.cpp$(ObjectSuffix) $(IntermediateDirectory)/MergeSort.cpp$(ObjectSuffix) $(IntermediateDirectory)/greedy.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/arrays.cpp$(ObjectSuffix) $(IntermediateDirectory)/MergeSort.cpp$(ObjectSuffix) 
 
 
 
@@ -186,14 +186,6 @@ $(IntermediateDirectory)/MergeSort.cpp$(DependSuffix): MergeSort.cpp
 
 $(IntermediateDirectory)/MergeSort.cpp$(PreprocessSuffix): MergeSort.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/MergeSort.cpp$(PreprocessSuffix) "MergeSort.cpp"
-
-$(IntermediateDirectory)/greedy.cpp$(ObjectSuffix): greedy.cpp $(IntermediateDirectory)/greedy.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Ankur/Downloads/data/git_datastructure/dataStructures/greedy.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/greedy.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/greedy.cpp$(DependSuffix): greedy.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/greedy.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/greedy.cpp$(DependSuffix) -MM "greedy.cpp"
-
-$(IntermediateDirectory)/greedy.cpp$(PreprocessSuffix): greedy.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/greedy.cpp$(PreprocessSuffix) "greedy.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

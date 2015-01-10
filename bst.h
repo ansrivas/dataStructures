@@ -35,4 +35,7 @@ treenode * inorderSuccessor(treenode *root);
 int LCA(treenode *root,int data1, int data2);
 int bstLCA(treenode *root,int data1, int data2);
 treenode *findnode(treenode *root,int data);
+
+bool identicalBinarytree(treenode *root1,treenode *root2);
+
 #endif

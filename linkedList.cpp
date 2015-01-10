@@ -5,8 +5,9 @@
 
 //Fn to create an empty node
 node * createNode(int iData){
-     node *temp = (node *)malloc(sizeof(node));
-     if(temp){
+     node *temp = NULL;
+	 temp = (node *)malloc(sizeof(node));
+     if(temp != NULL){
      temp->iData = iData;
      temp->next = NULL;        
      }     
@@ -39,8 +40,10 @@ Fn to reverse a list in linear time using a loop
 node * reverseList(node **head){
   
   if(*head == NULL){
-   printf("Empty List\n")   ;     
+   printf("Empty List\n");
+   return *head;
   }   
+  
   node *prev = NULL, *next = NULL ,*cur = *head;
   while(cur){
   next = cur->next;
@@ -58,21 +61,21 @@ Fn to reverse a list in recursively
 
 node * reverseListRecursive(node **head){
   
-    if(*head == NULL){
-   printf("Empty List\n")   ;     
-  }  
+	if(*head == NULL){
+		printf("Empty List\n")   ;  
+return *head;   
+	}  
   node *rest = NULL;
   node *first = NULL;
   
   first = *head;
   rest = first->next;
   
-  if(rest == NULL) // just one node
-  {
-   return *head;        
+  if(rest == NULL)  {
+	return *head;        
   }
   
-  reverseList(&rest);
+  reverseListRecursive(&rest);
   first->next->next = first;
   first->next = NULL;
 
@@ -90,6 +93,7 @@ void vFnPrintList(node *head){
        printf("%d ",head->iData);
        head = head->next;            
       }
+	  printf("\n");
      }else{
        printf("List Empty\n");      
      }
@@ -113,7 +117,28 @@ if(head){
 	}
 	return slow->iData;
 	
-}	
+	}		
+}
+
 	
+node *reverseListAtK(node **head, int count ){
+
+if(*head){
+	int k =0;
+	node *cur = *head, *next = NULL, *prev = NULL;
+	while(cur && k < count){
+		next = cur->next;
+		cur->next = prev;
+		prev = cur;
+		cur = next;
+		k++;
+	}
+	(*head)->next = reverseListAtK(&cur, count);
+	return prev;
+}	
+return NULL;	
 	
 }
+
+
+

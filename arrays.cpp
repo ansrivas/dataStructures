@@ -75,4 +75,26 @@ void longestContinuousPatch(updates inputs[],int numberOfInputs){
 }
 
 
+bool dupAtKdistance(int *arr, int len){
+	
+	//use hash set 
+	/*run a loop until length of arr
+	 * if(set.contains(arr[i])
+	 * return true;
+	 * 
+	 * set.add(arr[i]);
+	 * 
+	 * 
+	 */ 
+	
+	return true;
+}
+
+
+void minimizeTransactions(int **arr,int row, int col){
+	
+	
+	
+return;	
+}
 

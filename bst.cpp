@@ -261,6 +261,9 @@ printf("Data not found\n");
 return -1;
 }
 
+
+
+
 treenode * inorderSuccessor(treenode *root, int data){
 	if(root){
 		
@@ -270,3 +273,16 @@ treenode * inorderSuccessor(treenode *root, int data){
 	return NULL;
 }
 
+
+bool identicalBinarytree(treenode *root1,treenode *root2){
+	bool lefttree = false, righttree = false;
+	if(root1 && root2){
+			if(root1->data == root2->data){
+				  lefttree=  identicalBinarytree(root1->left,root2->left) ;
+				  righttree=  identicalBinarytree(root1->right,root2->right);
+				return (lefttree && righttree);
+	
+			}	
+}
+return false;
+}
