@@ -8,6 +8,7 @@
 #include "majorityElement.h"
 #include "arrays.h"
 #include "MergeSort.h" 
+#include "binarysearch.h"
 
 int test(int dimension,...){
 	
@@ -224,6 +225,7 @@ int main(int argc, char **argv)
 	//arr = random(5);
 	//vPrintArr(arr, 5);
 	
+	/*
 	node *head = NULL;
 	for(int i = 0;i<9;i++){
 		insertNode(&head,i);
@@ -231,6 +233,12 @@ int main(int argc, char **argv)
 	vFnPrintList(head);
 	head = reverseListAtK(&head,3);
 	vFnPrintList(head);
+	*/
+	int arr[9]={1,2,3,4,5,9,8,7};
+ 
+	binarysearchModified(arr, 0,7);
+	//binarysearch(arr,0,8,4);
+	
 	
 	return 0;
 }

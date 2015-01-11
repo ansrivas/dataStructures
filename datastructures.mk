@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Ankur
-Date                   :=01/10/15
+Date                   :=01/11/15
 CodeLitePath           :="C:\Program Files (x86)\CodeLite"
 LinkerName             :=C:/MinGW-4.8.1/bin/g++.exe 
 SharedObjectLinkerName :=C:/MinGW-4.8.1/bin/g++.exe -shared -fPIC
@@ -64,7 +64,7 @@ AS       := C:/MinGW-4.8.1/bin/as.exe
 CodeLiteDir:=C:\Program Files (x86)\CodeLite
 UNIT_TEST_PP_SRC_DIR:=C:\UnitTest++-1.3
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/linkedlist.cpp$(ObjectSuffix) $(IntermediateDirectory)/dynamicprogramming.cpp$(ObjectSuffix) $(IntermediateDirectory)/sorting.cpp$(ObjectSuffix) $(IntermediateDirectory)/utils.cpp$(ObjectSuffix) $(IntermediateDirectory)/bst.cpp$(ObjectSuffix) $(IntermediateDirectory)/queue.cpp$(ObjectSuffix) $(IntermediateDirectory)/heapsort.cpp$(ObjectSuffix) $(IntermediateDirectory)/queue_node.cpp$(ObjectSuffix) $(IntermediateDirectory)/majorityElement.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/arrays.cpp$(ObjectSuffix) $(IntermediateDirectory)/MergeSort.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/arrays.cpp$(ObjectSuffix) $(IntermediateDirectory)/MergeSort.cpp$(ObjectSuffix) $(IntermediateDirectory)/binarysearch.cpp$(ObjectSuffix) 
 
 
 
@@ -186,6 +186,14 @@ $(IntermediateDirectory)/MergeSort.cpp$(DependSuffix): MergeSort.cpp
 
 $(IntermediateDirectory)/MergeSort.cpp$(PreprocessSuffix): MergeSort.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/MergeSort.cpp$(PreprocessSuffix) "MergeSort.cpp"
+
+$(IntermediateDirectory)/binarysearch.cpp$(ObjectSuffix): binarysearch.cpp $(IntermediateDirectory)/binarysearch.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Ankur/Downloads/data/git_datastructure/dataStructures/binarysearch.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/binarysearch.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/binarysearch.cpp$(DependSuffix): binarysearch.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/binarysearch.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/binarysearch.cpp$(DependSuffix) -MM "binarysearch.cpp"
+
+$(IntermediateDirectory)/binarysearch.cpp$(PreprocessSuffix): binarysearch.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/binarysearch.cpp$(PreprocessSuffix) "binarysearch.cpp"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
